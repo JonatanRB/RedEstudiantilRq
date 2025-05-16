@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.components = new System.ComponentModel.Container();
+            this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -37,14 +38,18 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnMensajes = new System.Windows.Forms.Button();
+            this.btnNotificaciones = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.sidebar.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -52,27 +57,32 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // sidebar
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(38)))));
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 677);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(38)))));
+            this.sidebar.Controls.Add(this.panel1);
+            this.sidebar.Controls.Add(this.panel2);
+            this.sidebar.Controls.Add(this.panel3);
+            this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Controls.Add(this.panel5);
+            this.sidebar.Controls.Add(this.panel6);
+            this.sidebar.Controls.Add(this.panel7);
+            this.sidebar.Controls.Add(this.panel8);
+            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebar.Location = new System.Drawing.Point(0, 0);
+            this.sidebar.MaximumSize = new System.Drawing.Size(250, 703);
+            this.sidebar.MinimumSize = new System.Drawing.Size(75, 703);
+            this.sidebar.Name = "sidebar";
+            this.sidebar.Size = new System.Drawing.Size(250, 703);
+            this.sidebar.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
@@ -89,7 +99,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnBuscar);
             this.panel3.Location = new System.Drawing.Point(3, 167);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(247, 52);
@@ -97,7 +107,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnMensajes);
             this.panel4.Location = new System.Drawing.Point(3, 225);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(247, 52);
@@ -105,7 +115,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.btnNotificaciones);
             this.panel5.Location = new System.Drawing.Point(3, 283);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(247, 52);
@@ -113,7 +123,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button4);
+            this.panel6.Controls.Add(this.btnCrear);
             this.panel6.Location = new System.Drawing.Point(3, 341);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(247, 52);
@@ -121,7 +131,7 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button5);
+            this.panel7.Controls.Add(this.btnPerfil);
             this.panel7.Location = new System.Drawing.Point(3, 399);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(247, 52);
@@ -129,11 +139,24 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button6);
-            this.panel8.Location = new System.Drawing.Point(3, 457);
+            this.panel8.Controls.Add(this.btnClose);
+            this.panel8.Location = new System.Drawing.Point(3, 644);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 190, 3, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(247, 52);
             this.panel8.TabIndex = 7;
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMenu.Image = global::RedEstudiantilRoque.Properties.Resources.menu_50dp_FFFAFA_FILL0_wght400_GRAD0_opsz48;
+            this.btnMenu.Location = new System.Drawing.Point(18, 27);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(36, 41);
+            this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.TabStop = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // btnInicio
             // 
@@ -150,136 +173,154 @@
             this.btnInicio.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnInicio.Size = new System.Drawing.Size(278, 74);
             this.btnInicio.TabIndex = 2;
-            this.btnInicio.Text = "         Inicio";
+            this.btnInicio.Text = "             Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Image = global::RedEstudiantilRoque.Properties.Resources.search_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-10, -12);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(278, 74);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "         Buscar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.ForeColor = System.Drawing.Color.Snow;
+            this.btnBuscar.Image = global::RedEstudiantilRoque.Properties.Resources.search_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(-10, -12);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnBuscar.Size = new System.Drawing.Size(278, 74);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "             Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnMensajes
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.Snow;
-            this.button2.Image = global::RedEstudiantilRoque.Properties.Resources.mail_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-10, -12);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(278, 74);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "         Mensajes";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMensajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnMensajes.FlatAppearance.BorderSize = 0;
+            this.btnMensajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMensajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnMensajes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensajes.ForeColor = System.Drawing.Color.Snow;
+            this.btnMensajes.Image = global::RedEstudiantilRoque.Properties.Resources.mail_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnMensajes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMensajes.Location = new System.Drawing.Point(-10, -12);
+            this.btnMensajes.Name = "btnMensajes";
+            this.btnMensajes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnMensajes.Size = new System.Drawing.Size(278, 74);
+            this.btnMensajes.TabIndex = 2;
+            this.btnMensajes.Text = "             Mensajes";
+            this.btnMensajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMensajes.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnNotificaciones
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Snow;
-            this.button3.Image = global::RedEstudiantilRoque.Properties.Resources.notifications_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-10, -12);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(278, 74);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "         Notificaciones";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnNotificaciones.FlatAppearance.BorderSize = 0;
+            this.btnNotificaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnNotificaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnNotificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotificaciones.ForeColor = System.Drawing.Color.Snow;
+            this.btnNotificaciones.Image = global::RedEstudiantilRoque.Properties.Resources.notifications_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnNotificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotificaciones.Location = new System.Drawing.Point(-10, -12);
+            this.btnNotificaciones.Name = "btnNotificaciones";
+            this.btnNotificaciones.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnNotificaciones.Size = new System.Drawing.Size(278, 74);
+            this.btnNotificaciones.TabIndex = 2;
+            this.btnNotificaciones.Text = "             Notificaciones";
+            this.btnNotificaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotificaciones.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnCrear
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Snow;
-            this.button4.Image = global::RedEstudiantilRoque.Properties.Resources.add_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-10, -12);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(278, 74);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "         Crear";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnCrear.FlatAppearance.BorderSize = 0;
+            this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCrear.ForeColor = System.Drawing.Color.Snow;
+            this.btnCrear.Image = global::RedEstudiantilRoque.Properties.Resources.add_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnCrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrear.Location = new System.Drawing.Point(-10, -12);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnCrear.Size = new System.Drawing.Size(278, 74);
+            this.btnCrear.TabIndex = 2;
+            this.btnCrear.Text = "             Crear";
+            this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCrear.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnPerfil
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.Snow;
-            this.button5.Image = global::RedEstudiantilRoque.Properties.Resources.account_circle_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-10, -12);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(278, 74);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "         Perfil";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.ForeColor = System.Drawing.Color.Snow;
+            this.btnPerfil.Image = global::RedEstudiantilRoque.Properties.Resources.account_circle_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.Location = new System.Drawing.Point(-10, -12);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPerfil.Size = new System.Drawing.Size(278, 74);
+            this.btnPerfil.TabIndex = 2;
+            this.btnPerfil.Text = "             Perfil";
+            this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPerfil.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnClose
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.Snow;
-            this.button6.Image = global::RedEstudiantilRoque.Properties.Resources.logout_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-10, -12);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(278, 74);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "         Cerrar Sesion";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Snow;
+            this.btnClose.Image = global::RedEstudiantilRoque.Properties.Resources.logout_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(-10, -12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnClose.Size = new System.Drawing.Size(278, 74);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "             Cerrar Sesion";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(75, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Menu";
+            // 
+            // slidebarTimer
+            // 
+            this.slidebarTimer.Interval = 10;
+            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(1407, 677);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1482, 703);
+            this.Controls.Add(this.sidebar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.Text = "Inicio";
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.sidebar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -287,27 +328,31 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMensajes;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnNotificaciones;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.PictureBox btnMenu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer slidebarTimer;
     }
 }
