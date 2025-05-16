@@ -16,5 +16,12 @@ namespace RedEstudiantilRoque
         {
             InitializeComponent();
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Form1 frmInicioAlumno = new Form1();
+            frmInicioAlumno.Show();
+            this.Hide();
+        }
     }
 }

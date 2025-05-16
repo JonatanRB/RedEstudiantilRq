@@ -24,7 +24,16 @@ namespace RedEstudiantilRoque
 
         private void btnAccesoAdmin_Click(object sender, EventArgs e)
         {
+            inicioSesionAdmins formAdmins = new inicioSesionAdmins();
+            formAdmins.Show();
+            this.Hide();
+        }
 
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            Inicio formMain = new Inicio();
+            formMain.Show();
+            this.Hide();
         }
     }
 }
