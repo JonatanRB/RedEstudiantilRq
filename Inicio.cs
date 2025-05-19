@@ -49,5 +49,19 @@ namespace RedEstudiantilRoque
         {
 
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Form1 frmLogin = new Form1();
+            frmLogin.Show();
+            this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscar frmBuscar = new frmBuscar();
+            frmBuscar.Show();
+            this.Hide();
+        }
     }
 }
