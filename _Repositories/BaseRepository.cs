@@ -8,6 +8,6 @@ namespace RedEstudiantilRoque._Repositories
 {
     public abstract class BaseRepository
     {
-        protected string connection
+        protected string connectionString;
     }
 }
