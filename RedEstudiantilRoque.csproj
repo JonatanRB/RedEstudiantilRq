@@ -65,6 +65,12 @@
     <Compile Include="frmBuscar.Designer.cs">
       <DependentUpon>frmBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearAlumno.Designer.cs">
+      <DependentUpon>frmCrearAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar.resx">
       <DependentUpon>frmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearAlumno.resx">
+      <DependentUpon>frmCrearAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
@@ -161,6 +170,11 @@
   <ItemGroup>
     <None Include="Resources\menu_50dp_FFFAFA_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\group_add_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_notes_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

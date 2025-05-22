@@ -1,6 +1,6 @@
 ﻿namespace RedEstudiantilRoque
 {
-    partial class Inicio
+    partial class frmCrearAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,22 +51,23 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.slidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel9 = new System.Windows.Forms.Panel();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbAlumno = new System.Windows.Forms.RadioButton();
+            this.rdbProfesor = new System.Windows.Forms.RadioButton();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.crearTimer = new System.Windows.Forms.Timer(this.components);
+            this.txtNua = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picImgAlumno = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -82,12 +82,8 @@
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgAlumno)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -107,7 +103,7 @@
             this.sidebar.MinimumSize = new System.Drawing.Size(75, 703);
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(250, 703);
-            this.sidebar.TabIndex = 0;
+            this.sidebar.TabIndex = 1;
             // 
             // panel1
             // 
@@ -125,7 +121,7 @@
             this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(75, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Menu";
             // 
@@ -139,7 +135,6 @@
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMenu.TabIndex = 0;
             this.btnMenu.TabStop = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // panel7
             // 
@@ -221,7 +216,6 @@
             this.btnMensajes.Text = "             Mensajes";
             this.btnMensajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMensajes.UseVisualStyleBackColor = false;
-            this.btnMensajes.Click += new System.EventHandler(this.btnMensajes_Click);
             // 
             // panel3
             // 
@@ -249,7 +243,6 @@
             this.btnBuscar.Text = "             Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel2
             // 
@@ -277,7 +270,6 @@
             this.btnInicio.Text = "             Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // crearPanel
             // 
@@ -344,7 +336,6 @@
             this.btnRegistrarAlumno.Text = "             Alumno";
             this.btnRegistrarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarAlumno.UseVisualStyleBackColor = false;
-            this.btnRegistrarAlumno.Click += new System.EventHandler(this.btnRegistrarAlumno_Click);
             // 
             // panel6
             // 
@@ -373,7 +364,6 @@
             this.btnCrear.Text = "             Crear";
             this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrear.UseVisualStyleBackColor = false;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // panel8
             // 
@@ -402,167 +392,180 @@
             this.btnClose.Text = "             Cerrar Sesion";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // slidebarTimer
-            // 
-            this.slidebarTimer.Interval = 10;
-            this.slidebarTimer.Tick += new System.EventHandler(this.slidebarTimer_Tick);
             // 
             // panel9
             // 
-            this.panel9.AutoScroll = true;
-            this.panel9.Controls.Add(this.monthCalendar1);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(1149, 0);
+            this.panel9.Controls.Add(this.groupBox1);
+            this.panel9.Controls.Add(this.btnGuardar);
+            this.panel9.Controls.Add(this.btnLimpiar);
+            this.panel9.Controls.Add(this.button1);
+            this.panel9.Controls.Add(this.txtContrasena);
+            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.txtDescripcion);
+            this.panel9.Controls.Add(this.txtCorreo);
+            this.panel9.Controls.Add(this.label4);
+            this.panel9.Controls.Add(this.txtNombre);
+            this.panel9.Controls.Add(this.label3);
+            this.panel9.Controls.Add(this.txtNua);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Controls.Add(this.picImgAlumno);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(250, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(333, 703);
-            this.panel9.TabIndex = 1;
+            this.panel9.Size = new System.Drawing.Size(1232, 703);
+            this.panel9.TabIndex = 2;
             // 
-            // monthCalendar1
+            // groupBox1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(25, 118);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
+            this.groupBox1.Controls.Add(this.rdbAlumno);
+            this.groupBox1.Controls.Add(this.rdbProfesor);
+            this.groupBox1.Location = new System.Drawing.Point(737, 294);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(387, 41);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipo Usuario";
             // 
-            // panel10
+            // rdbAlumno
             // 
-            this.panel10.Controls.Add(this.label7);
-            this.panel10.Controls.Add(this.pictureBox4);
-            this.panel10.Controls.Add(this.label6);
-            this.panel10.Controls.Add(this.pictureBox3);
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.pictureBox2);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 376);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(333, 327);
-            this.panel10.TabIndex = 0;
+            this.rdbAlumno.AutoSize = true;
+            this.rdbAlumno.Location = new System.Drawing.Point(89, 14);
+            this.rdbAlumno.Name = "rdbAlumno";
+            this.rdbAlumno.Size = new System.Drawing.Size(73, 20);
+            this.rdbAlumno.TabIndex = 16;
+            this.rdbAlumno.TabStop = true;
+            this.rdbAlumno.Text = "Alumno";
+            this.rdbAlumno.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // rdbProfesor
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Snow;
-            this.label7.Location = new System.Drawing.Point(120, 254);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.rdbProfesor.AutoSize = true;
+            this.rdbProfesor.Location = new System.Drawing.Point(204, 15);
+            this.rdbProfesor.Name = "rdbProfesor";
+            this.rdbProfesor.Size = new System.Drawing.Size(79, 20);
+            this.rdbProfesor.TabIndex = 17;
+            this.rdbProfesor.TabStop = true;
+            this.rdbProfesor.Text = "Profesor";
+            this.rdbProfesor.UseVisualStyleBackColor = true;
             // 
-            // pictureBox4
+            // btnGuardar
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(39, 235);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(63, 61);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.btnGuardar.Location = new System.Drawing.Point(871, 561);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(111, 40);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(1013, 561);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(111, 40);
+            this.btnLimpiar.TabIndex = 14;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(568, 453);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(63, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "ver";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(204, 453);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(367, 22);
+            this.txtContrasena.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(120, 172);
+            this.label6.Location = new System.Drawing.Point(114, 456);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 16);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Contraseña:";
             // 
-            // pictureBox3
+            // txtDescripcion
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(39, 153);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 61);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.txtDescripcion.Location = new System.Drawing.Point(737, 346);
+            this.txtDescripcion.Multiline = true;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(387, 129);
+            this.txtDescripcion.TabIndex = 8;
+            this.txtDescripcion.Text = "Descripción...";
             // 
-            // label5
+            // txtCorreo
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(120, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(39, 66);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 61);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(51, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Sugerencias para ti";
-            // 
-            // panel11
-            // 
-            this.panel11.AutoScroll = true;
-            this.panel11.Controls.Add(this.label4);
-            this.panel11.Controls.Add(this.pictureBox1);
-            this.panel11.Controls.Add(this.label3);
-            this.panel11.Location = new System.Drawing.Point(250, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(899, 703);
-            this.panel11.TabIndex = 2;
+            this.txtCorreo.Location = new System.Drawing.Point(204, 395);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(427, 22);
+            this.txtCorreo.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(246, 611);
+            this.label4.Location = new System.Drawing.Point(142, 398);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Correo:";
             // 
-            // pictureBox1
+            // txtNombre
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(218, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 505);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.txtNombre.Location = new System.Drawing.Point(204, 343);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(427, 22);
+            this.txtNombre.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(312, 51);
+            this.label3.Location = new System.Drawing.Point(134, 346);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre:";
             // 
-            // crearTimer
+            // txtNua
             // 
-            this.crearTimer.Interval = 10;
-            this.crearTimer.Tick += new System.EventHandler(this.crearTimer_Tick);
+            this.txtNua.Location = new System.Drawing.Point(204, 294);
+            this.txtNua.Name = "txtNua";
+            this.txtNua.Size = new System.Drawing.Size(427, 22);
+            this.txtNua.TabIndex = 2;
             // 
-            // Inicio
+            // label2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(134, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Matricula:";
+            // 
+            // picImgAlumno
+            // 
+            this.picImgAlumno.Location = new System.Drawing.Point(531, 75);
+            this.picImgAlumno.Name = "picImgAlumno";
+            this.picImgAlumno.Size = new System.Drawing.Size(161, 154);
+            this.picImgAlumno.TabIndex = 0;
+            this.picImgAlumno.TabStop = false;
+            // 
+            // frmCrearAlumno
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.ClientSize = new System.Drawing.Size(1482, 703);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.sidebar);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Inicio";
-            this.Text = "Inicio";
+            this.Name = "frmCrearAlumno";
+            this.Text = "frmCrearAlumno";
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -578,14 +581,10 @@
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel9.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImgAlumno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -594,42 +593,43 @@
 
         private System.Windows.Forms.FlowLayoutPanel sidebar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnMensajes;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnNotificaciones;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox btnMenu;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnPerfil;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.PictureBox btnMenu;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer slidebarTimer;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnNotificaciones;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnMensajes;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel crearPanel;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnCrearPublicacion;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnRegistrarAlumno;
-        public System.Windows.Forms.Timer crearTimer;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox txtNua;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picImgAlumno;
+        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbAlumno;
+        private System.Windows.Forms.RadioButton rdbProfesor;
     }
 }

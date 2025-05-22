@@ -271,6 +271,20 @@ namespace RedEstudiantilRoque
             }
         }
 
+        private void btnCerrarAll_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

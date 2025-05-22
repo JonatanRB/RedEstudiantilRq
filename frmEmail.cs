@@ -151,5 +151,48 @@ namespace RedEstudiantilRoque
                 }
             }
         }
+
+        private void btCnlear1_Click(object sender, EventArgs e)
+        {
+            txtMail.Clear();
+        }
+
+        private void btnClear2_Click(object sender, EventArgs e)
+        {
+            txtSub.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            txtMail.Clear();
+            txtMessage.Clear();
+            txtSub.Clear();
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio frmIni = new Inicio();
+            frmIni.Show();
+            this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscar frmBuscar = new frmBuscar();
+            frmBuscar.Show();
+            this.Hide();
+        }
+
+        private void btnMensajes_Click(object sender, EventArgs e)
+        {
+            frmEmail frmEmail = new frmEmail();
+            frmEmail.Show();
+            this.Hide();
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -152,6 +152,7 @@
             this.btnInicio.Text = "             Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // panel3
             // 
@@ -179,6 +180,7 @@
             this.btnBuscar.Text = "             Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel4
             // 
@@ -206,6 +208,7 @@
             this.btnMensajes.Text = "             Mensajes";
             this.btnMensajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMensajes.UseVisualStyleBackColor = false;
+            this.btnMensajes.Click += new System.EventHandler(this.btnMensajes_Click);
             // 
             // panel5
             // 
@@ -260,6 +263,7 @@
             this.btnCrear.Text = "             Crear";
             this.btnCrear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // panel7
             // 
@@ -354,6 +358,7 @@
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear2
             // 
@@ -363,6 +368,7 @@
             this.btnClear2.TabIndex = 7;
             this.btnClear2.Text = "clear";
             this.btnClear2.UseVisualStyleBackColor = true;
+            this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click);
             // 
             // btCnlear1
             // 
@@ -372,6 +378,7 @@
             this.btCnlear1.TabIndex = 3;
             this.btCnlear1.Text = "clear";
             this.btCnlear1.UseVisualStyleBackColor = true;
+            this.btCnlear1.Click += new System.EventHandler(this.btCnlear1_Click);
             // 
             // btnSend
             // 

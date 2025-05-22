@@ -13,6 +13,7 @@ namespace RedEstudiantilRoque
     public partial class Inicio : Form
     {
         bool sidebarExpand;
+        bool crearCollapse;
         public Inicio()
         {
             InitializeComponent();
@@ -68,6 +69,43 @@ namespace RedEstudiantilRoque
         {
             frmEmail frmEmail = new frmEmail();
             frmEmail.Show();
+            this.Hide();
+        }
+
+        private void crearTimer_Tick(object sender, EventArgs e)
+        {
+            if (crearCollapse)
+            {
+                
+                crearPanel.Height += 10;
+                if (crearPanel.Height >= crearPanel.MaximumSize.Height)
+                {
+                    crearTimer.Stop();
+                    crearCollapse = false;
+                }
+            }
+            else
+            {
+                
+                crearPanel.Height -= 10;
+                if (crearPanel.Height <= crearPanel.MinimumSize.Height)
+                {
+                    crearTimer.Stop();
+                    crearCollapse = true;
+                }
+            }
+        }
+
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            
+            crearTimer.Start();
+        }
+
+        private void btnRegistrarAlumno_Click(object sender, EventArgs e)
+        {
+            frmCrearAlumno frmCrearAlumno = new frmCrearAlumno();
+            frmCrearAlumno.Show();
             this.Hide();
         }
     }

@@ -36,7 +36,6 @@
             this.btnCerrarAll = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.txtBuscarAlumno = new System.Windows.Forms.TextBox();
@@ -83,11 +82,12 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar.BackgroundImage = global::RedEstudiantilRoque.Properties.Resources.logout_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
-            this.btnRegresar.Location = new System.Drawing.Point(1348, 23);
+            this.btnRegresar.Location = new System.Drawing.Point(1357, 22);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(71, 52);
+            this.btnRegresar.Size = new System.Drawing.Size(58, 52);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // tabControl1
             // 
@@ -105,7 +105,6 @@
             this.tabPage1.Controls.Add(this.btnCerrarAll);
             this.tabPage1.Controls.Add(this.btnBorrar);
             this.tabPage1.Controls.Add(this.btnEditar);
-            this.tabPage1.Controls.Add(this.btnAgregar);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.dgvAlumnos);
             this.tabPage1.Controls.Add(this.txtBuscarAlumno);
@@ -126,10 +125,11 @@
             this.btnCerrarAll.TabIndex = 7;
             this.btnCerrarAll.Text = "Cerrar Todo";
             this.btnCerrarAll.UseVisualStyleBackColor = true;
+            this.btnCerrarAll.Click += new System.EventHandler(this.btnCerrarAll_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(1236, 192);
+            this.btnBorrar.Location = new System.Drawing.Point(1238, 135);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(177, 36);
             this.btnBorrar.TabIndex = 6;
@@ -139,22 +139,13 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(1236, 141);
+            this.btnEditar.Location = new System.Drawing.Point(1238, 84);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(177, 36);
             this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(1236, 84);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(177, 36);
-            this.btnAgregar.TabIndex = 4;
-            this.btnAgregar.Text = "Agregar Nuevo";
-            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -262,6 +253,7 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "Cerrar Todo";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox1
             // 
@@ -319,7 +311,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.TextBox txtBuscarAlumno;
