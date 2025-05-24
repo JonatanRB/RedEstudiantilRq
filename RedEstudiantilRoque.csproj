@@ -77,6 +77,12 @@
     <Compile Include="frmEmail.Designer.cs">
       <DependentUpon>frmEmail.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVistaProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVistaProfesor.Designer.cs">
+      <DependentUpon>frmVistaProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVistaProfesor.resx">
+      <DependentUpon>frmVistaProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

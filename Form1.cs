@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace RedEstudiantilRoque
 {
@@ -31,9 +33,52 @@ namespace RedEstudiantilRoque
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            Inicio formMain = new Inicio();
-            formMain.Show();
-            this.Hide();
+            string matricula = txtMatricula.Text;
+            string contrasena = txtContrasena.Text;
+
+            string connectionString = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS;Initial Catalog=SistemaRoque2;User ID=sa;Password=hola;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = @"
+            SELECT u.UsuarioID, u.Nombre, a.Nua
+            FROM Alumnos a
+            INNER JOIN Usuarios u ON a.UsuarioID = u.UsuarioID
+            WHERE a.Nua = @Nua AND u.Contrasena = @Contrasena AND u.TipoUsuario = 'Alumno'";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@Nua", matricula);
+                    command.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        int usuarioID = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        string nua = reader.GetString(2);
+
+                        MessageBox.Show("Bienvenido, " + nombre);
+
+                        // PASAR EL NUA AL FORMULARIO INICIO
+                        Inicio formMain = new Inicio(nua);
+                        formMain.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Matrícula o contraseña incorrectos.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
     }
 }

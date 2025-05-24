@@ -14,9 +14,11 @@ namespace RedEstudiantilRoque
     {
         bool sidebarExpand;
         bool crearCollapse;
-        public Inicio()
+        private string nuaUsuarioActual;
+        public Inicio(string nua)
         {
             InitializeComponent();
+            nuaUsuarioActual = nua;
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
