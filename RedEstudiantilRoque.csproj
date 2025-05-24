@@ -59,6 +59,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlumno.Designer.cs">
+      <DependentUpon>FormAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="frmEmail.Designer.cs">
       <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioAlumno.Designer.cs">
+      <DependentUpon>frmInicioAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="frmVistaProfesor.cs">
       <SubType>Form</SubType>
@@ -101,6 +113,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAlumno.resx">
+      <DependentUpon>FormAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar.resx">
       <DependentUpon>frmBuscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmail.resx">
       <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioAlumno.resx">
+      <DependentUpon>frmInicioAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVistaProfesor.resx">
       <DependentUpon>frmVistaProfesor.cs</DependentUpon>

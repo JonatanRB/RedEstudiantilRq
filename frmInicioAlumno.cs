@@ -10,21 +10,20 @@ using System.Windows.Forms;
 
 namespace RedEstudiantilRoque
 {
-    public partial class Inicio : Form
+    public partial class frmInicioAlumno : Form
     {
         bool sidebarExpand;
         bool crearCollapse;
         private string nuaUsuarioActual;
-        public Inicio()
+        public frmInicioAlumno()
         {
             InitializeComponent();
-            
         }
 
-        public Inicio(string matricula)
+        public frmInicioAlumno(string nua)
         {
             InitializeComponent();
-            nuaUsuarioActual = matricula;
+            nuaUsuarioActual = nua;
         }
 
         private void slidebarTimer_Tick(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace RedEstudiantilRoque
             if (sidebarExpand)
             {
                 sidebar.Width -= 10;
-                if(sidebar.Width == sidebar.MinimumSize.Width)
+                if (sidebar.Width == sidebar.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     slidebarTimer.Stop();
@@ -41,7 +40,7 @@ namespace RedEstudiantilRoque
             else
             {
                 sidebar.Width += 10;
-                if(sidebar.Width == sidebar.MaximumSize.Width)
+                if (sidebar.Width == sidebar.MaximumSize.Width)
                 {
                     sidebarExpand = true;
                     slidebarTimer.Stop();
@@ -80,40 +79,10 @@ namespace RedEstudiantilRoque
             this.Hide();
         }
 
-        private void crearTimer_Tick(object sender, EventArgs e)
+        private void btnPerfil_Click(object sender, EventArgs e)
         {
-            if (crearCollapse)
-            {
-                
-                crearPanel.Height += 10;
-                if (crearPanel.Height >= crearPanel.MaximumSize.Height)
-                {
-                    crearTimer.Stop();
-                    crearCollapse = false;
-                }
-            }
-            else
-            {
-                
-                crearPanel.Height -= 10;
-                if (crearPanel.Height <= crearPanel.MinimumSize.Height)
-                {
-                    crearTimer.Stop();
-                    crearCollapse = true;
-                }
-            }
-        }
-
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-            
-            crearTimer.Start();
-        }
-
-        private void btnRegistrarAlumno_Click(object sender, EventArgs e)
-        {
-            frmCrearAlumno frmCrearAlumno = new frmCrearAlumno();
-            frmCrearAlumno.Show();
+            FormAlumno frmAlumno = new FormAlumno();
+            frmAlumno.Show();
             this.Hide();
         }
     }

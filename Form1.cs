@@ -47,8 +47,8 @@ namespace RedEstudiantilRoque
                     string query = @"
             SELECT u.UsuarioID, u.Nombre, a.Nua
             FROM Alumnos a
-            INNER JOIN Usuarios u ON a.UsuarioID = u.UsuarioID
-            WHERE a.Nua = @Nua AND u.Contrasena = @Contrasena AND u.TipoUsuario = 'Alumno'";
+            INNER JOIN Usuarios u ON (a.UsuarioID = u.UsuarioID)
+            WHERE a.Nua = @Nua AND u.Contraseña = @Contrasena AND u.TipoUsuario = 'Alumno'";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@Nua", matricula);
@@ -65,8 +65,8 @@ namespace RedEstudiantilRoque
                         MessageBox.Show("Bienvenido, " + nombre);
 
                         // PASAR EL NUA AL FORMULARIO INICIO
-                        Inicio formMain = new Inicio(nua);
-                        formMain.Show();
+                        frmInicioAlumno formMainAlumno = new frmInicioAlumno(nua);
+                        formMainAlumno.Show();
                         this.Hide();
                     }
                     else
