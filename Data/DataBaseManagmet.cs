@@ -20,7 +20,7 @@ namespace RedEstudiantilRoque.Data
         {
             try
             {
-                String cadena = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS; User id=sa; Password=hola; Initial Catalog=SistemaRoque2; TrustServerCertificate=true";
+                String cadena = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS; User id=sa; Password=hola; Initial Catalog=RoqueSistema3; TrustServerCertificate=true";
                 Cn = new SqlConnection(cadena);
 
                 Cn.Open();

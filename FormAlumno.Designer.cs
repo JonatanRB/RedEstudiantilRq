@@ -73,6 +73,7 @@
             this.btnReticula.TabIndex = 25;
             this.btnReticula.Text = "Horario";
             this.btnReticula.UseVisualStyleBackColor = true;
+            this.btnReticula.Click += new System.EventHandler(this.btnReticula_Click);
             // 
             // btnReticula1
             // 
@@ -82,6 +83,7 @@
             this.btnReticula1.TabIndex = 24;
             this.btnReticula1.Text = "Reticula";
             this.btnReticula1.UseVisualStyleBackColor = true;
+            this.btnReticula1.Click += new System.EventHandler(this.btnReticula1_Click);
             // 
             // btnProgreso
             // 
@@ -91,6 +93,7 @@
             this.btnProgreso.TabIndex = 23;
             this.btnProgreso.Text = "Progreso";
             this.btnProgreso.UseVisualStyleBackColor = true;
+            this.btnProgreso.Click += new System.EventHandler(this.btnProgreso_Click);
             // 
             // btnRegresar
             // 

@@ -36,7 +36,7 @@ namespace RedEstudiantilRoque
             string matricula = txtMatricula.Text;
             string contrasena = txtContrasena.Text;
 
-            string connectionString = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS;Initial Catalog=SistemaRoque2;User ID=sa;Password=hola;";
+            string connectionString = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS;Initial Catalog=RoqueSistema3;User ID=sa;Password=hola;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -47,7 +47,7 @@ namespace RedEstudiantilRoque
                     string query = @"
             SELECT u.UsuarioID, u.Nombre, a.Nua
             FROM Alumnos a
-            INNER JOIN Usuarios u ON (a.UsuarioID = u.UsuarioID)
+            INNER JOIN Usuarios u ON a.UsuarioID = u.UsuarioID
             WHERE a.Nua = @Nua AND u.Contraseña = @Contrasena AND u.TipoUsuario = 'Alumno'";
 
                     SqlCommand command = new SqlCommand(query, connection);

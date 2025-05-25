@@ -32,7 +32,7 @@ namespace RedEstudiantilRoque
             string matricula = txtNoIdentificacion.Text;
             string contrasena = txtContrasena.Text;
 
-            string connectionString = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS;Initial Catalog=SistemaRoque2;User ID=sa;Password=hola;";
+            string connectionString = "Data Source=DESKTOP-8LL593G\\SQLEXPRESS;Initial Catalog=RoqueSistema3;User ID=sa;Password=hola;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

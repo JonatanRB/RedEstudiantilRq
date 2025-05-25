@@ -81,9 +81,16 @@ namespace RedEstudiantilRoque
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
-            FormAlumno frmAlumno = new FormAlumno();
-            frmAlumno.Show();
-            this.Hide();
+            if (!string.IsNullOrEmpty(nuaUsuarioActual))
+            {
+                FormAlumno formAlumno = new FormAlumno(nuaUsuarioActual);
+                formAlumno.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("No se ha especificado un NUA para el perfil.");
+            }
         }
     }
 }

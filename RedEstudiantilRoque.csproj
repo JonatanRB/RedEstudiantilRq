@@ -65,6 +65,24 @@
     <Compile Include="FormAlumno.Designer.cs">
       <DependentUpon>FormAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHorario.Designer.cs">
+      <DependentUpon>FormHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProgreso.Designer.cs">
+      <DependentUpon>FormProgreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReticula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReticula.Designer.cs">
+      <DependentUpon>FormReticula.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlumno.resx">
       <DependentUpon>FormAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHorario.resx">
+      <DependentUpon>FormHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProgreso.resx">
+      <DependentUpon>FormProgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReticula.resx">
+      <DependentUpon>FormReticula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscar.resx">
       <DependentUpon>frmBuscar.cs</DependentUpon>

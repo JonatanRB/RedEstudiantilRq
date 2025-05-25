@@ -16,7 +16,7 @@ namespace RedEstudiantilRoque
     {
         private int alumnoID;
         private string nuaAlumno;
-        string connectionString = "Server=DESKTOP-8LL593G\\SQLEXPRESS;Database=RoqueSistema2;User Id=sa;Password=hola;";
+        string connectionString = "Server=DESKTOP-8LL593G\\SQLEXPRESS;Database=RoqueSistema3;User Id=sa;Password=hola;";
         public FormAlumno(string nua)
         {
             InitializeComponent();
@@ -29,7 +29,6 @@ namespace RedEstudiantilRoque
             this.alumnoID = alumnoID;
             nuaAlumno = nua;
         }
-
         void CargarInformacionAlumno(string nua)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -81,18 +80,95 @@ namespace RedEstudiantilRoque
             }
         }
 
-
-
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
             frmInicioAlumno.Show();
             this.Hide();
         }
+        void CargarSkillsYLogros(string skills, string logros)
+        {
+            listBoxSkils.Items.Clear();
+            listBoxLogros.Items.Clear();
+
+            foreach (var skill in skills.Split(new[] { ',', ';', '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                listBoxSkils.Items.Add(skill.Trim());
+            }
+
+            foreach (var logro in logros.Split(new[] { ',', ';', '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                listBoxLogros.Items.Add(logro.Trim());
+            }
+        }
+
+        private void FormAlumno_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(nuaAlumno))
+            {
+                CargarInformacionAlumno(nuaAlumno);
+            }
+            else
+            {
+                MessageBox.Show("No se ha especificado un NUA para cargar datos.");
+            }
+        }
+        void AgregarEtiquetas(FlowLayoutPanel panel, string datos)
+        {
+            panel.Controls.Clear();
+            var elementos = datos.Split(new[] { ',', ';', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in elementos)
+            {
+                Label lbl = new Label();
+                lbl.Text = item.Trim();
+                lbl.BackColor = Color.Teal;
+                lbl.ForeColor = Color.White;
+                lbl.Padding = new Padding(5, 3, 5, 3);
+                lbl.Margin = new Padding(4);
+                lbl.AutoSize = true;
+                lbl.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+                panel.Controls.Add(lbl);
+            }
+        }
+
+
+        private void btnReticula1_Click(object sender, EventArgs e)
+        {
+            if (alumnoID <= 0)
+            {
+                MessageBox.Show("No se ha cargado correctamente el ID del alumno.");
+                return;
+            }
+
+            FormReticula frmReticula = new FormReticula(alumnoID, nuaAlumno);
+            frmReticula.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnProgreso_Click(object sender, EventArgs e)
+        {
+            FormProgreso frmProgreso = new FormProgreso();
+            frmProgreso.Show();
+            this.Hide();
+        }
+
+        private void btnReticula_Click(object sender, EventArgs e)
+        {
+            //Este es el boton para cargar el horario
+            if (alumnoID <= 0)
+            {
+                MessageBox.Show("No se ha cargado correctamente el ID del alumno.");
+                return;
+            }
+
+            FormHorario frmHorario = new FormHorario(alumnoID, nuaAlumno);
+            frmHorario.Show();
+            this.Hide();
+        }
 
         private void CargarSkillsYLogros(string nua)
         {
-            string connectionString = "Server=DESKTOP-8LL593G\\SQLEXPRESS;Database=RoqueSistema2;User Id=sa;Password=hola;";
+            string connectionString = "Server=LEONEL\\SQLEXPRESS;Database=RoqueSistema3;User Id=sa;Password=hola;";
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"SELECT Skills, Logros FROM Alumnos WHERE AlumnoID = @AlumnoID";
@@ -148,18 +224,9 @@ namespace RedEstudiantilRoque
             }
             return string.Join(" ", palabras);
         }
-
-        private void FormAlumno_Load(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(nuaAlumno))
-            {
-                CargarInformacionAlumno(nuaAlumno);
-            }
-            else
-            {
-                MessageBox.Show("No se ha especificado un NUA para cargar datos.");
-            }
-        }
     }
+
 }
+    
+
 
