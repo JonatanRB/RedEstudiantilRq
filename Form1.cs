@@ -81,5 +81,14 @@ namespace RedEstudiantilRoque
             }
         }
 
+        private void lblRecuperarContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

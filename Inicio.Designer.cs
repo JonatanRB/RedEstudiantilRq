@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,12 +89,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(1)))));
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Controls.Add(this.panel5);
@@ -108,6 +111,7 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(250, 703);
             this.sidebar.TabIndex = 0;
+            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
             // panel1
             // 
@@ -447,15 +451,17 @@
             this.label7.ForeColor = System.Drawing.Color.Snow;
             this.label7.Location = new System.Drawing.Point(120, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 20);
+            this.label7.Size = new System.Drawing.Size(68, 20);
             this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.label7.Text = "User 03";
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = global::RedEstudiantilRoque.Properties.Resources.sentiment_excited_50dp_FFFAFA_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox4.Location = new System.Drawing.Point(39, 235);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(63, 61);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
@@ -465,15 +471,17 @@
             this.label6.ForeColor = System.Drawing.Color.Snow;
             this.label6.Location = new System.Drawing.Point(120, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.label6.Text = "User 02";
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::RedEstudiantilRoque.Properties.Resources.sentiment_satisfied_50dp_FFFAFA_FILL0_wght400_GRAD0_opsz48;
             this.pictureBox3.Location = new System.Drawing.Point(39, 153);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(63, 61);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
@@ -483,17 +491,20 @@
             this.label5.ForeColor = System.Drawing.Color.Snow;
             this.label5.Location = new System.Drawing.Point(120, 85);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.label5.Text = "User 01";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(39, 66);
+            this.pictureBox2.Image = global::RedEstudiantilRoque.Properties.Resources.sentiment_very_satisfied_50dp_FFFAFA_FILL0_wght400_GRAD0_opsz48;
+            this.pictureBox2.Location = new System.Drawing.Point(44, 75);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 61);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -509,6 +520,7 @@
             // panel11
             // 
             this.panel11.AutoScroll = true;
+            this.panel11.Controls.Add(this.pictureBox5);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Controls.Add(this.label3);
@@ -517,33 +529,47 @@
             this.panel11.Size = new System.Drawing.Size(899, 703);
             this.panel11.TabIndex = 2;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::RedEstudiantilRoque.Properties.Resources.carnelo_logo1;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(239, 20);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(55, 51);
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(246, 611);
+            this.label4.Location = new System.Drawing.Point(215, 607);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(444, 60);
             this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::RedEstudiantilRoque.Properties.Resources.cosa_que_se_pone;
             this.pictureBox1.Location = new System.Drawing.Point(218, 85);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(459, 505);
+            this.pictureBox1.Size = new System.Drawing.Size(505, 503);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(312, 51);
+            this.label3.Location = new System.Drawing.Point(310, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 20);
+            this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.label3.Text = "TecNM Roque";
             // 
             // crearTimer
             // 
@@ -560,6 +586,7 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.sidebar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inicio";
             this.Text = "Inicio";
@@ -585,6 +612,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -631,5 +659,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button btnRegistrarAlumno;
         public System.Windows.Forms.Timer crearTimer;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

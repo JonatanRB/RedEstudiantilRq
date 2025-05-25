@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscar));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(61, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 29);
@@ -70,9 +72,11 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panel1.Controls.Add(this.btnRegresar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.Coral;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1445, 100);
@@ -80,8 +84,12 @@
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.btnRegresar.BackgroundImage = global::RedEstudiantilRoque.Properties.Resources.logout_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40;
+            this.btnRegresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.btnRegresar.Location = new System.Drawing.Point(1357, 22);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(58, 52);
@@ -102,6 +110,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.tabPage1.Controls.Add(this.btnCerrarAll);
             this.tabPage1.Controls.Add(this.btnBorrar);
             this.tabPage1.Controls.Add(this.btnEditar);
@@ -109,13 +118,13 @@
             this.tabPage1.Controls.Add(this.dgvAlumnos);
             this.tabPage1.Controls.Add(this.txtBuscarAlumno);
             this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1437, 597);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnCerrarAll
             // 
@@ -178,6 +187,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(43, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 16);
@@ -186,6 +196,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.tabPage2.Controls.Add(this.txtCorreo);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.txtNombre);
@@ -195,13 +206,13 @@
             this.tabPage2.Controls.Add(this.pictureBox1);
             this.tabPage2.Controls.Add(this.txtNua);
             this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.ForeColor = System.Drawing.Color.Black;
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1437, 597);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // txtCorreo
             // 
@@ -257,9 +268,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::RedEstudiantilRoque.Properties.Resources.carnelo_logo;
             this.pictureBox1.Location = new System.Drawing.Point(62, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(264, 221);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -286,6 +299,7 @@
             this.ClientSize = new System.Drawing.Size(1445, 726);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscar";
             this.Text = "frmBuscar";
             this.Load += new System.EventHandler(this.frmBuscar_Load);

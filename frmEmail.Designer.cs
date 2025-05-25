@@ -77,7 +77,7 @@
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(38)))));
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel2);
             this.sidebar.Controls.Add(this.panel3);
@@ -327,6 +327,7 @@
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.btnDelete);
             this.panel9.Controls.Add(this.btnClear2);
@@ -337,6 +338,7 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.txtMail);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panel9.Location = new System.Drawing.Point(250, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1232, 703);
@@ -413,9 +415,11 @@
             // 
             // panel10
             // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panel10.Controls.Add(this.pictureBox1);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.ForeColor = System.Drawing.Color.Snow;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1232, 103);
@@ -432,6 +436,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(214, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);

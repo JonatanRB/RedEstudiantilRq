@@ -88,7 +88,7 @@
             // 
             // sidebar
             // 
-            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(38)))));
+            this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
             this.sidebar.Controls.Add(this.panel1);
             this.sidebar.Controls.Add(this.panel7);
             this.sidebar.Controls.Add(this.panel5);
@@ -395,6 +395,7 @@
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.panel9.Controls.Add(this.groupBox1);
             this.panel9.Controls.Add(this.btnGuardar);
             this.panel9.Controls.Add(this.btnLimpiar);
@@ -419,6 +420,7 @@
             // 
             this.groupBox1.Controls.Add(this.rdbAlumno);
             this.groupBox1.Controls.Add(this.rdbProfesor);
+            this.groupBox1.ForeColor = System.Drawing.Color.Snow;
             this.groupBox1.Location = new System.Drawing.Point(737, 294);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(387, 41);
@@ -469,7 +471,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(568, 453);
+            this.button1.Location = new System.Drawing.Point(568, 452);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 23);
             this.button1.TabIndex = 13;
@@ -486,6 +488,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Snow;
             this.label6.Location = new System.Drawing.Point(114, 456);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 16);
@@ -511,6 +514,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Snow;
             this.label4.Location = new System.Drawing.Point(142, 398);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 16);
@@ -527,6 +531,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Snow;
             this.label3.Location = new System.Drawing.Point(134, 346);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 16);
@@ -543,6 +548,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Location = new System.Drawing.Point(134, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
