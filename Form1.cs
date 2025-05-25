@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using RedEstudiantilRoque.Modelo;
 
 namespace RedEstudiantilRoque
 {
@@ -21,7 +22,6 @@ namespace RedEstudiantilRoque
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Agregar inicializacion de base de datos
         }
 
         private void btnAccesoAdmin_Click(object sender, EventArgs e)
@@ -80,5 +80,6 @@ namespace RedEstudiantilRoque
                 }
             }
         }
+
     }
 }

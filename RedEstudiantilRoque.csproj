@@ -126,6 +126,9 @@
       <DependentUpon>inicioSesionAdmins.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\alumno.cs" />
+    <Compile Include="Modelo\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -229,6 +232,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_notes_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\475975575_627438906455421_5376402118412824361_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\475975575_627438906455421_5376402118412824361_n1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

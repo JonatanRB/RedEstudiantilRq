@@ -63,6 +63,26 @@ namespace RedEstudiantilRoque.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _475975575_627438906455421_5376402118412824361_n {
+            get {
+                object obj = ResourceManager.GetObject("475975575_627438906455421_5376402118412824361_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _475975575_627438906455421_5376402118412824361_n1 {
+            get {
+                object obj = ResourceManager.GetObject("475975575_627438906455421_5376402118412824361_n1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account_circle_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40 {
             get {
                 object obj = ResourceManager.GetObject("account_circle_35dp_FFFAFA_FILL0_wght400_GRAD0_opsz40", resourceCulture);
