@@ -66,5 +66,37 @@ namespace RedEstudiantilRoque
             }
         }
 
+        private void btnMensajes_Click(object sender, EventArgs e)
+        {
+            frmEmail frmEmail = new frmEmail();
+            frmEmail.Show();
+            this.Hide();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmBuscar frmBuscar = new frmBuscar();
+            frmBuscar.Show();
+            this.Hide();
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            frmCrearAlumno frmCrearAlumno = new frmCrearAlumno();
+            frmCrearAlumno.Show();
+            this.Hide();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Form1 Inicio = new Form1();
+            Inicio.Show();
+            this.Hide();
+        }
     }
 }

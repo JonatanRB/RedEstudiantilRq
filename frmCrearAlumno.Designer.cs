@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearAlumno));
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -147,6 +148,7 @@
             // btnPerfil
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -162,6 +164,7 @@
             this.btnPerfil.Text = "             Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // panel5
             // 
@@ -174,6 +177,7 @@
             // btnNotificaciones
             // 
             this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnNotificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotificaciones.FlatAppearance.BorderSize = 0;
             this.btnNotificaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNotificaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -201,6 +205,7 @@
             // btnMensajes
             // 
             this.btnMensajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnMensajes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensajes.FlatAppearance.BorderSize = 0;
             this.btnMensajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMensajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -216,6 +221,7 @@
             this.btnMensajes.Text = "             Mensajes";
             this.btnMensajes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMensajes.UseVisualStyleBackColor = false;
+            this.btnMensajes.Click += new System.EventHandler(this.btnMensajes_Click);
             // 
             // panel3
             // 
@@ -228,6 +234,7 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -243,6 +250,7 @@
             this.btnBuscar.Text = "             Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // panel2
             // 
@@ -255,6 +263,7 @@
             // btnInicio
             // 
             this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -270,6 +279,7 @@
             this.btnInicio.Text = "             Inicio";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // crearPanel
             // 
@@ -348,6 +358,7 @@
             // btnCrear
             // 
             this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -377,6 +388,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -392,6 +404,7 @@
             this.btnClose.Text = "             Cerrar Sesion";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // panel9
             // 
@@ -431,6 +444,7 @@
             // rdbAlumno
             // 
             this.rdbAlumno.AutoSize = true;
+            this.rdbAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbAlumno.Location = new System.Drawing.Point(89, 14);
             this.rdbAlumno.Name = "rdbAlumno";
             this.rdbAlumno.Size = new System.Drawing.Size(73, 20);
@@ -442,6 +456,7 @@
             // rdbProfesor
             // 
             this.rdbProfesor.AutoSize = true;
+            this.rdbProfesor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdbProfesor.Location = new System.Drawing.Point(204, 15);
             this.rdbProfesor.Name = "rdbProfesor";
             this.rdbProfesor.Size = new System.Drawing.Size(79, 20);
@@ -452,6 +467,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Location = new System.Drawing.Point(871, 561);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(111, 40);
@@ -462,6 +478,7 @@
             // 
             // btnLimpiar
             // 
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.Location = new System.Drawing.Point(1013, 561);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(111, 40);
@@ -557,9 +574,11 @@
             // 
             // picImgAlumno
             // 
+            this.picImgAlumno.Image = global::RedEstudiantilRoque.Properties.Resources.carnelo_logo;
             this.picImgAlumno.Location = new System.Drawing.Point(531, 75);
             this.picImgAlumno.Name = "picImgAlumno";
             this.picImgAlumno.Size = new System.Drawing.Size(161, 154);
+            this.picImgAlumno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImgAlumno.TabIndex = 0;
             this.picImgAlumno.TabStop = false;
             // 
@@ -570,7 +589,10 @@
             this.ClientSize = new System.Drawing.Size(1482, 703);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.sidebar);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCrearAlumno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCrearAlumno";
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

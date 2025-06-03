@@ -86,6 +86,7 @@
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.label1);
             this.Name = "FormReticula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReticula";
             this.Load += new System.EventHandler(this.FormReticula_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

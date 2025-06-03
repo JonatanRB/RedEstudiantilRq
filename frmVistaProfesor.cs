@@ -71,5 +71,19 @@ namespace RedEstudiantilRoque
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();    
+            frm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Inicio frminicio = new Inicio();
+            frminicio.Show();
+            this.Hide();
+        }
     }
 }

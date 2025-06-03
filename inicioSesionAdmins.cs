@@ -60,6 +60,8 @@ namespace RedEstudiantilRoque
 
                         MessageBox.Show("Bienvenido, " + nombre);
 
+                        Session.UsuarioID = usuarioID;
+
                         // PASAR EL NUA AL FORMULARIO INICIO
                         Inicio formMain = new Inicio(nua);
                         formMain.Show();

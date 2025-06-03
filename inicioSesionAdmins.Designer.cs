@@ -32,29 +32,30 @@
             this.btnRegresar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundedPanel1 = new RedEstudiantilRoque.Modelo.RoundedPanel();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAcceder = new System.Windows.Forms.Button();
-            this.txtNoIdentificacion = new System.Windows.Forms.TextBox();
-            this.btnCalendario = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblRecuperarContrasena = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCalendario = new System.Windows.Forms.Button();
+            this.txtNoIdentificacion = new System.Windows.Forms.TextBox();
+            this.btnAcceder = new System.Windows.Forms.Button();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.roundedPanel2 = new RedEstudiantilRoque.Modelo.RoundedPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.roundedPanel1.SuspendLayout();
-            this.roundedPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.roundedPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegresar
             // 
+            this.btnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegresar.Location = new System.Drawing.Point(43, 21);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(75, 23);
@@ -94,12 +95,14 @@
             this.roundedPanel1.Size = new System.Drawing.Size(551, 413);
             this.roundedPanel1.TabIndex = 12;
             // 
-            // txtContrasena
+            // panel2
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(155, 152);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(349, 22);
-            this.txtContrasena.TabIndex = 4;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(68, 152);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(88, 22);
+            this.panel2.TabIndex = 12;
             // 
             // label3
             // 
@@ -111,31 +114,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Contraseña:";
             // 
-            // btnAcceder
+            // panel1
             // 
-            this.btnAcceder.Location = new System.Drawing.Point(245, 221);
-            this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(75, 23);
-            this.btnAcceder.TabIndex = 5;
-            this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.UseVisualStyleBackColor = true;
-            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
-            // 
-            // txtNoIdentificacion
-            // 
-            this.txtNoIdentificacion.Location = new System.Drawing.Point(155, 107);
-            this.txtNoIdentificacion.Name = "txtNoIdentificacion";
-            this.txtNoIdentificacion.Size = new System.Drawing.Size(349, 22);
-            this.txtNoIdentificacion.TabIndex = 2;
-            // 
-            // btnCalendario
-            // 
-            this.btnCalendario.Location = new System.Drawing.Point(198, 276);
-            this.btnCalendario.Name = "btnCalendario";
-            this.btnCalendario.Size = new System.Drawing.Size(161, 23);
-            this.btnCalendario.TabIndex = 7;
-            this.btnCalendario.Text = "Calendario Escolar";
-            this.btnCalendario.UseVisualStyleBackColor = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(28, 107);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(128, 22);
+            this.panel1.TabIndex = 11;
             // 
             // label2
             // 
@@ -146,6 +132,32 @@
             this.label2.Size = new System.Drawing.Size(109, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "No.Identificacion:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Constantia", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(151)))));
+            this.label1.Location = new System.Drawing.Point(151, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 22);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Inicio de Sesion Profesores";
+            // 
+            // lblRecuperarContrasena
+            // 
+            this.lblRecuperarContrasena.AutoSize = true;
+            this.lblRecuperarContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecuperarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRecuperarContrasena.ForeColor = System.Drawing.Color.Yellow;
+            this.lblRecuperarContrasena.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblRecuperarContrasena.Location = new System.Drawing.Point(286, 350);
+            this.lblRecuperarContrasena.Name = "lblRecuperarContrasena";
+            this.lblRecuperarContrasena.Size = new System.Drawing.Size(141, 16);
+            this.lblRecuperarContrasena.TabIndex = 9;
+            this.lblRecuperarContrasena.TabStop = true;
+            this.lblRecuperarContrasena.Text = "Recuperar contraseña";
             // 
             // label4
             // 
@@ -158,18 +170,41 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "¿Olvidaste tu contraseña?";
             // 
-            // lblRecuperarContrasena
+            // btnCalendario
             // 
-            this.lblRecuperarContrasena.AutoSize = true;
-            this.lblRecuperarContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecuperarContrasena.ForeColor = System.Drawing.Color.Yellow;
-            this.lblRecuperarContrasena.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblRecuperarContrasena.Location = new System.Drawing.Point(286, 350);
-            this.lblRecuperarContrasena.Name = "lblRecuperarContrasena";
-            this.lblRecuperarContrasena.Size = new System.Drawing.Size(141, 16);
-            this.lblRecuperarContrasena.TabIndex = 9;
-            this.lblRecuperarContrasena.TabStop = true;
-            this.lblRecuperarContrasena.Text = "Recuperar contraseña";
+            this.btnCalendario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalendario.Location = new System.Drawing.Point(198, 276);
+            this.btnCalendario.Name = "btnCalendario";
+            this.btnCalendario.Size = new System.Drawing.Size(161, 23);
+            this.btnCalendario.TabIndex = 7;
+            this.btnCalendario.Text = "Calendario Escolar";
+            this.btnCalendario.UseVisualStyleBackColor = true;
+            // 
+            // txtNoIdentificacion
+            // 
+            this.txtNoIdentificacion.Location = new System.Drawing.Point(155, 107);
+            this.txtNoIdentificacion.Name = "txtNoIdentificacion";
+            this.txtNoIdentificacion.Size = new System.Drawing.Size(349, 22);
+            this.txtNoIdentificacion.TabIndex = 2;
+            // 
+            // btnAcceder
+            // 
+            this.btnAcceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcceder.Location = new System.Drawing.Point(245, 221);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(75, 23);
+            this.btnAcceder.TabIndex = 5;
+            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.UseVisualStyleBackColor = true;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(155, 152);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '●';
+            this.txtContrasena.Size = new System.Drawing.Size(349, 22);
+            this.txtContrasena.TabIndex = 4;
             // 
             // roundedPanel2
             // 
@@ -201,41 +236,11 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(499, 60);
+            this.label6.Location = new System.Drawing.Point(481, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.Size = new System.Drawing.Size(137, 16);
             this.label6.TabIndex = 10;
-            this.label6.Text = "POner cosas Aqui";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Constantia", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(151)))));
-            this.label1.Location = new System.Drawing.Point(151, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 22);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Inicio de Sesion Profesores";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(28, 107);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(128, 22);
-            this.panel1.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(68, 152);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(88, 22);
-            this.panel2.TabIndex = 12;
+            this.label6.Text = "Hola soy un anuncio!!!";
             // 
             // inicioSesionAdmins
             // 
@@ -250,16 +255,17 @@
             this.Controls.Add(this.btnRegresar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "inicioSesionAdmins";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "inicioSesionAdmins";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
-            this.roundedPanel2.ResumeLayout(false);
-            this.roundedPanel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.roundedPanel2.ResumeLayout(false);
+            this.roundedPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

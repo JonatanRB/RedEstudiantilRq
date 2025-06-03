@@ -126,5 +126,10 @@ namespace RedEstudiantilRoque
         {
 
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

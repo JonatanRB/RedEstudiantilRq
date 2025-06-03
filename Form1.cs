@@ -10,18 +10,37 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using RedEstudiantilRoque.Modelo;
+using static RedEstudiantilRoque.FormAvanceAlumno;
+using System.Drawing.Drawing2D;
 
 namespace RedEstudiantilRoque
 {
+    
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void EstilizarBoton(Button boton)
+        {
+            boton.FlatStyle = FlatStyle.Flat;
+            boton.FlatAppearance.BorderSize = 0;
+            boton.BackColor = Color.FromArgb(255, 253, 151);
+            boton.ForeColor = Color.Black;
+            boton.Font = new Font("Segoe UI", 10);
+            boton.Size = new Size(148, 30);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            EstilizarBoton(btnAcceder);
+            EstilizarBoton(btnAccesoAdmin);
+            EstilizarBoton(btnCalendario);
+            RedondearBoton(btnAcceder, 15);
+            RedondearBoton(btnAccesoAdmin, 15);
+            RedondearBoton(btnCalendario, 15);
         }
 
         private void btnAccesoAdmin_Click(object sender, EventArgs e)
@@ -64,6 +83,9 @@ namespace RedEstudiantilRoque
 
                         MessageBox.Show("Bienvenido, " + nombre);
 
+                        Session.UsuarioID = usuarioID;
+
+
                         // PASAR EL NUA AL FORMULARIO INICIO
                         frmInicioAlumno formMainAlumno = new frmInicioAlumno(nua);
                         formMainAlumno.Show();
@@ -89,6 +111,23 @@ namespace RedEstudiantilRoque
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void RedondearBoton(Button btn, int radio = 20)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.StartFigure();
+            path.AddArc(new Rectangle(0, 0, radio, radio), 180, 90);
+            path.AddArc(new Rectangle(btn.Width - radio, 0, radio, radio), 270, 90);
+            path.AddArc(new Rectangle(btn.Width - radio, btn.Height - radio, radio, radio), 0, 90);
+            path.AddArc(new Rectangle(0, btn.Height - radio, radio, radio), 90, 90);
+            path.CloseFigure();
+            btn.Region = new Region(path);
         }
     }
 }

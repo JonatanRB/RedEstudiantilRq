@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using RedEstudiantilRoque.Data;
+using System.Data.SqlClient;
 
 namespace RedEstudiantilRoque
 {
@@ -171,9 +173,20 @@ namespace RedEstudiantilRoque
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Inicio frmIni = new Inicio();
-            frmIni.Show();
-            this.Hide();
+            string tipoUsuario = ObtenerTipoUsuario();
+
+            if (tipoUsuario == "Alumno")
+            {
+                frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
+                frmInicioAlumno.Show();
+                this.Hide();
+            }
+            else if (tipoUsuario == "Maestro")
+            {
+                Inicio frmInicio = new Inicio();
+                frmInicio.ShowDialog();
+                this.Hide();
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -194,5 +207,53 @@ namespace RedEstudiantilRoque
         {
             
         }
+
+        private string ObtenerTipoUsuario()
+        {
+            string tipo = "";
+            try
+            {
+                DataBaseManagmet db = new DataBaseManagmet();
+                db.conectar();
+                SqlConnection con = db.obtenerConexion();
+
+                string query = "SELECT TipoUsuario FROM Usuarios WHERE UsuarioID = @id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", Session.UsuarioID);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    tipo = dr["TipoUsuario"].ToString();
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener tipo de usuario: " + ex.Message);
+            }
+
+            return tipo;
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            string tipoUsuario = ObtenerTipoUsuario();
+
+            if (tipoUsuario == "Alumno")
+            {
+               // FormAlumno frmAlumno = new FormAlumno();
+                //frmAlumno.Show();
+                //this.Hide();
+            }
+            else if (tipoUsuario == "Maestro")
+            {
+                Inicio frmInicio = new Inicio();
+                frmInicio.ShowDialog();
+                this.Hide();
+            }
+        }
+
+
     }
 }

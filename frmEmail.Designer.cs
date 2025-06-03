@@ -137,6 +137,7 @@
             // btnInicio
             // 
             this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.FlatAppearance.BorderSize = 0;
             this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -165,6 +166,7 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -193,6 +195,7 @@
             // btnMensajes
             // 
             this.btnMensajes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnMensajes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMensajes.FlatAppearance.BorderSize = 0;
             this.btnMensajes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMensajes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -221,6 +224,7 @@
             // btnNotificaciones
             // 
             this.btnNotificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnNotificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNotificaciones.FlatAppearance.BorderSize = 0;
             this.btnNotificaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnNotificaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -248,6 +252,7 @@
             // btnCrear
             // 
             this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnCrear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -276,6 +281,7 @@
             // btnPerfil
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerfil.FlatAppearance.BorderSize = 0;
             this.btnPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
@@ -291,6 +297,7 @@
             this.btnPerfil.Text = "             Perfil";
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPerfil.UseVisualStyleBackColor = false;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // panel8
             // 
@@ -354,6 +361,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Location = new System.Drawing.Point(175, 533);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
@@ -364,6 +372,7 @@
             // 
             // btnClear2
             // 
+            this.btnClear2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear2.Location = new System.Drawing.Point(655, 270);
             this.btnClear2.Name = "btnClear2";
             this.btnClear2.Size = new System.Drawing.Size(75, 23);
@@ -374,6 +383,7 @@
             // 
             // btCnlear1
             // 
+            this.btCnlear1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCnlear1.Location = new System.Drawing.Point(655, 211);
             this.btCnlear1.Name = "btCnlear1";
             this.btCnlear1.Size = new System.Drawing.Size(75, 23);
@@ -384,6 +394,7 @@
             // 
             // btnSend
             // 
+            this.btnSend.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSend.Location = new System.Drawing.Point(94, 533);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
@@ -463,6 +474,7 @@
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.sidebar);
             this.Name = "frmEmail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmail";
             this.sidebar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

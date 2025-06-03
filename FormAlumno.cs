@@ -29,6 +29,7 @@ namespace RedEstudiantilRoque
             this.alumnoID = alumnoID;
             nuaAlumno = nua;
         }
+
         void CargarInformacionAlumno(string nua)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -82,9 +83,9 @@ namespace RedEstudiantilRoque
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
-            frmInicioAlumno.Show();
-            this.Hide();
+            //frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
+            //frmInicioAlumno.Show();
+            //this.Hide();
         }
         void CargarSkillsYLogros(string skills, string logros)
         {
@@ -141,13 +142,13 @@ namespace RedEstudiantilRoque
             }
 
             FormReticula frmReticula = new FormReticula(alumnoID, nuaAlumno);
-            frmReticula.ShowDialog();
+            frmReticula.Show();
             this.Hide();
         }
 
         private void btnProgreso_Click(object sender, EventArgs e)
         {
-            FormProgreso frmProgreso = new FormProgreso();
+            FormAvanceAlumno frmProgreso = new FormAvanceAlumno(alumnoID, nuaAlumno);
             frmProgreso.Show();
             this.Hide();
         }
@@ -223,6 +224,25 @@ namespace RedEstudiantilRoque
                     palabras[i] = char.ToUpper(palabras[i][0]) + palabras[i].Substring(1).ToLower();
             }
             return string.Join(" ", palabras);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
+            frmInicioAlumno.Show();
+            this.Hide();
         }
     }
 

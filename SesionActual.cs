@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
 
-namespace RedEstudiantilRoque.Data
+namespace RedEstudiantilRoque
 {
-    public static class Session
+    public static class SesionActual
     {
         public static int UsuarioID { get; set; }
-    }
-    internal class funciones
-    {
+        public static int AlumnoID { get; set; }
+        public static string Nombre { get; set; }
     }
 }

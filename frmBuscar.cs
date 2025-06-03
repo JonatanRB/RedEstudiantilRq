@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RedEstudiantilRoque.Data;
 using System.Data.SqlClient;
+using static System.Collections.Specialized.BitVector32;
 
 namespace RedEstudiantilRoque
 {
@@ -278,13 +279,56 @@ namespace RedEstudiantilRoque
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            string tipoUsuario = ObtenerTipoUsuario();
+
+            if (tipoUsuario == "Alumno")
+            {
+                frmInicioAlumno frmInicioAlumno = new frmInicioAlumno();
+                frmInicioAlumno.Show();
+                this.Hide();
+            }
+            else if (tipoUsuario == "Maestro")
+            {
+                Inicio frmInicio = new Inicio();
+                frmInicio.ShowDialog();
+                this.Hide();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
+        private string ObtenerTipoUsuario()
+        {
+            string tipo = "";
+            try
+            {
+                DataBaseManagmet db = new DataBaseManagmet();
+                db.conectar();
+                SqlConnection con = db.obtenerConexion();
+
+                string query = "SELECT TipoUsuario FROM Usuarios WHERE UsuarioID = @id";
+                SqlCommand cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@id", Session.UsuarioID);
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    tipo = dr["TipoUsuario"].ToString();
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener tipo de usuario: " + ex.Message);
+            }
+
+            return tipo;
+        }
+
     }
 }
 
