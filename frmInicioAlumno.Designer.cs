@@ -488,6 +488,7 @@
             this.ClientSize = new System.Drawing.Size(1482, 703);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.sidebar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInicioAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InicioAlumno";

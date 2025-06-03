@@ -40,21 +40,22 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.roundedPanel2 = new RedEstudiantilRoque.Modelo.RoundedPanel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.roundedPanel1 = new RedEstudiantilRoque.Modelo.RoundedPanel();
             this.imgProfesor = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtNua = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHorarios = new System.Windows.Forms.Button();
             this.btnTutorias = new System.Windows.Forms.Button();
             this.btnSubirCalificacion = new System.Windows.Forms.Button();
             this.btnClases = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblMatricula = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -64,9 +65,9 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.roundedPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfesor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel9
@@ -89,6 +90,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
@@ -166,20 +168,36 @@
             this.roundedPanel2.Size = new System.Drawing.Size(651, 293);
             this.roundedPanel2.TabIndex = 15;
             // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(34, 22);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(579, 244);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            // 
             // roundedPanel1
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.Snow;
             this.roundedPanel1.BorderColor = System.Drawing.Color.Snow;
             this.roundedPanel1.BorderRadius = 20;
             this.roundedPanel1.BorderSize = 2;
+            this.roundedPanel1.Controls.Add(this.lblDescripcion);
+            this.roundedPanel1.Controls.Add(this.lblCorreo);
+            this.roundedPanel1.Controls.Add(this.lblNombre);
+            this.roundedPanel1.Controls.Add(this.lblMatricula);
             this.roundedPanel1.Controls.Add(this.imgProfesor);
             this.roundedPanel1.Controls.Add(this.label5);
-            this.roundedPanel1.Controls.Add(this.txtNua);
-            this.roundedPanel1.Controls.Add(this.txtCorreo);
             this.roundedPanel1.Controls.Add(this.label2);
-            this.roundedPanel1.Controls.Add(this.txtNombre);
             this.roundedPanel1.Controls.Add(this.label3);
-            this.roundedPanel1.Controls.Add(this.txtDescripcion);
             this.roundedPanel1.Controls.Add(this.label4);
             this.roundedPanel1.Location = new System.Drawing.Point(169, 82);
             this.roundedPanel1.Name = "roundedPanel1";
@@ -206,20 +224,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Correo:";
             // 
-            // txtNua
-            // 
-            this.txtNua.Location = new System.Drawing.Point(301, 45);
-            this.txtNua.Name = "txtNua";
-            this.txtNua.Size = new System.Drawing.Size(303, 22);
-            this.txtNua.TabIndex = 1;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(301, 143);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(303, 22);
-            this.txtCorreo.TabIndex = 12;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -230,13 +234,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Matricula:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(301, 95);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(303, 22);
-            this.txtNombre.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -246,13 +243,6 @@
             this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Nombre:";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(118, 197);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(486, 22);
-            this.txtDescripcion.TabIndex = 5;
             // 
             // label4
             // 
@@ -309,21 +299,56 @@
             this.btnClases.Text = "Clases";
             this.btnClases.UseVisualStyleBackColor = false;
             // 
-            // chart1
+            // lblMatricula
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(34, 22);
-            this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(579, 244);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.lblMatricula.AutoSize = true;
+            this.lblMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMatricula.Location = new System.Drawing.Point(308, 51);
+            this.lblMatricula.Name = "lblMatricula";
+            this.lblMatricula.Size = new System.Drawing.Size(61, 16);
+            this.lblMatricula.TabIndex = 14;
+            this.lblMatricula.Text = "Matricula";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(308, 101);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(56, 16);
+            this.lblNombre.TabIndex = 15;
+            this.lblNombre.Text = "Nombre";
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Location = new System.Drawing.Point(308, 149);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(48, 16);
+            this.lblCorreo.TabIndex = 16;
+            this.lblCorreo.Text = "Correo";
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(115, 200);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(79, 16);
+            this.lblDescripcion.TabIndex = 17;
+            this.lblDescripcion.Text = "Descripcion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 24);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Informacion Profesor";
             // 
             // frmVistaProfesor
             // 
@@ -338,6 +363,7 @@
             this.Load += new System.EventHandler(this.frmVistaProfesor_Load);
             this.panel9.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -345,10 +371,10 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.roundedPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.roundedPanel1.ResumeLayout(false);
             this.roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgProfesor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,18 +382,14 @@
         #endregion
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNua;
         private System.Windows.Forms.PictureBox imgProfesor;
         private System.Windows.Forms.Button btnHorarios;
         private System.Windows.Forms.Button btnTutorias;
         private System.Windows.Forms.Button btnSubirCalificacion;
         private System.Windows.Forms.Button btnClases;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCorreo;
         private Modelo.RoundedPanel roundedPanel2;
         private Modelo.RoundedPanel roundedPanel1;
         private System.Windows.Forms.Panel panel1;
@@ -378,5 +400,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblMatricula;
+        private System.Windows.Forms.Label label1;
     }
 }

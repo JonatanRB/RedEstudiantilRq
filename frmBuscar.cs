@@ -87,6 +87,11 @@ namespace RedEstudiantilRoque
         private void frmBuscar_Load(object sender, EventArgs e)
         {
             cargarAlumnos();
+            EstilizarDataGridView(dgvAlumnos);
+
+            EstilizarBoton(btnBuscar);
+            EstilizarBoton(btnEditar);
+            EstilizarBoton(btnBorrar);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -327,6 +332,48 @@ namespace RedEstudiantilRoque
             }
 
             return tipo;
+        }
+
+        private void EstilizarDataGridView(DataGridView dgv)
+        {
+            // General
+            dgv.BackgroundColor = Color.FromArgb(60, 60, 60);
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.GridColor = Color.FromArgb(100, 100, 100);
+
+            // Cabecera
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Celdas
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(70, 70, 70);
+            dgv.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215); // azul moderno
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgv.RowTemplate.Height = 30;
+
+            // Fila de encabezado
+            dgv.RowHeadersVisible = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // columnas ocupan todo el ancho disponible
+        }
+
+        private void EstilizarBoton(Button boton)
+        {
+            boton.ForeColor = Color.Black;
+            boton.FlatStyle = FlatStyle.Flat;
+            boton.FlatAppearance.BorderSize = 0;
+            boton.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            boton.Cursor = Cursors.Hand;
         }
 
     }

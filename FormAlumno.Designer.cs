@@ -71,20 +71,22 @@
             // 
             this.listBoxLogros.BackColor = System.Drawing.Color.Snow;
             this.listBoxLogros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxLogros.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxLogros.ForeColor = System.Drawing.Color.Black;
             this.listBoxLogros.FormattingEnabled = true;
-            this.listBoxLogros.ItemHeight = 16;
+            this.listBoxLogros.ItemHeight = 20;
             this.listBoxLogros.Location = new System.Drawing.Point(23, 26);
             this.listBoxLogros.Name = "listBoxLogros";
-            this.listBoxLogros.Size = new System.Drawing.Size(449, 224);
+            this.listBoxLogros.Size = new System.Drawing.Size(449, 220);
             this.listBoxLogros.TabIndex = 27;
             // 
             // listBoxSkils
             // 
             this.listBoxSkils.BackColor = System.Drawing.Color.Snow;
             this.listBoxSkils.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBoxSkils.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxSkils.FormattingEnabled = true;
-            this.listBoxSkils.ItemHeight = 16;
+            this.listBoxSkils.ItemHeight = 20;
             this.listBoxSkils.Location = new System.Drawing.Point(47, 12);
             this.listBoxSkils.Name = "listBoxSkils";
             this.listBoxSkils.Size = new System.Drawing.Size(545, 240);
@@ -92,7 +94,7 @@
             // 
             // btnReticula
             // 
-            this.btnReticula.Location = new System.Drawing.Point(1098, 400);
+            this.btnReticula.Location = new System.Drawing.Point(1136, 400);
             this.btnReticula.Name = "btnReticula";
             this.btnReticula.Size = new System.Drawing.Size(294, 70);
             this.btnReticula.TabIndex = 25;
@@ -102,7 +104,7 @@
             // 
             // btnReticula1
             // 
-            this.btnReticula1.Location = new System.Drawing.Point(1098, 494);
+            this.btnReticula1.Location = new System.Drawing.Point(1136, 494);
             this.btnReticula1.Name = "btnReticula1";
             this.btnReticula1.Size = new System.Drawing.Size(294, 70);
             this.btnReticula1.TabIndex = 24;
@@ -112,7 +114,7 @@
             // 
             // btnProgreso
             // 
-            this.btnProgreso.Location = new System.Drawing.Point(1098, 594);
+            this.btnProgreso.Location = new System.Drawing.Point(1136, 594);
             this.btnProgreso.Name = "btnProgreso";
             this.btnProgreso.Size = new System.Drawing.Size(294, 70);
             this.btnProgreso.TabIndex = 23;
@@ -134,22 +136,22 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Black;
             this.lblDescripcion.Location = new System.Drawing.Point(462, 195);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(166, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(152, 22);
             this.lblDescripcion.TabIndex = 21;
             this.lblDescripcion.Text = "Ingenieria en Tics";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(318, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.Size = new System.Drawing.Size(127, 22);
             this.label3.TabIndex = 20;
             this.label3.Text = "Descripcion :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -157,44 +159,44 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
             this.lblNombre.Location = new System.Drawing.Point(424, 142);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(309, 25);
+            this.lblNombre.Size = new System.Drawing.Size(278, 22);
             this.lblNombre.TabIndex = 19;
             this.lblNombre.Text = "Leonel Manuel Martinez Gonzalez";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(318, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.Size = new System.Drawing.Size(91, 22);
             this.label2.TabIndex = 18;
             this.label2.Text = "Nombre :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(318, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(103, 22);
             this.label1.TabIndex = 17;
             this.label1.Text = "Matricula :";
             // 
             // lblNua
             // 
             this.lblNua.AutoSize = true;
-            this.lblNua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNua.ForeColor = System.Drawing.Color.Black;
             this.lblNua.Location = new System.Drawing.Point(437, 93);
             this.lblNua.Name = "lblNua";
-            this.lblNua.Size = new System.Drawing.Size(100, 25);
+            this.lblNua.Size = new System.Drawing.Size(90, 22);
             this.lblNua.TabIndex = 16;
             this.lblNua.Text = "23980449";
             // 
@@ -226,7 +228,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 54);
+            this.panel1.Size = new System.Drawing.Size(1500, 54);
             this.panel1.TabIndex = 29;
             // 
             // panel5
@@ -299,9 +301,10 @@
             this.roundedPanel1.Controls.Add(this.lblNombre);
             this.roundedPanel1.Controls.Add(this.label3);
             this.roundedPanel1.Controls.Add(this.lblDescripcion);
+            this.roundedPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedPanel1.Location = new System.Drawing.Point(67, 101);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(763, 273);
+            this.roundedPanel1.Size = new System.Drawing.Size(800, 273);
             this.roundedPanel1.TabIndex = 30;
             // 
             // roundedPanel2
@@ -324,7 +327,7 @@
             this.roundedPanel3.BorderRadius = 20;
             this.roundedPanel3.BorderSize = 5;
             this.roundedPanel3.Controls.Add(this.listBoxLogros);
-            this.roundedPanel3.Location = new System.Drawing.Point(896, 101);
+            this.roundedPanel3.Location = new System.Drawing.Point(934, 101);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(496, 273);
             this.roundedPanel3.TabIndex = 32;
@@ -334,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(1482, 703);
+            this.ClientSize = new System.Drawing.Size(1500, 700);
             this.Controls.Add(this.roundedPanel3);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.roundedPanel1);

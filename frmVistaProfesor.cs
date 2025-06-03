@@ -14,7 +14,14 @@ namespace RedEstudiantilRoque
 {
     public partial class frmVistaProfesor : Form
     {
+        private int usuarioId;
+        string connectionString = "Server=DESKTOP-8LL593G\\SQLEXPRESS;Database=RoqueSistema3;User Id=sa;Password=hola;";
         public frmVistaProfesor()
+        {
+            InitializeComponent();
+        }
+
+        public frmVistaProfesor(int alumnoID, string matricula)
         {
             InitializeComponent();
         }
@@ -24,48 +31,38 @@ namespace RedEstudiantilRoque
             //borra metodo no sirve
         }
 
-        public void cargarMaestro()
+        private void CargarInformacionMaestro(int id)
         {
-            /*
-            maestroIDSeleccionado = Convert.ToInt32(dgvAlumnos.SelectedRows[0].Cells["AlumnoID"].Value);
+            string conexion = "TuCadenaDeConexion";
 
-            DataBaseManagmet db = new DataBaseManagmet();
-                db.conectar();
-                SqlConnection conn = db.obtenerConexion();
+            using (SqlConnection conn = new SqlConnection(conexion))
+            {
+                conn.Open();
+                string query = @"
+                SELECT u.Nombre, u.Correo, u.FotoPerfil, u.Descripcion, m.Matricula
+                FROM Maestros m
+                INNER JOIN Usuarios u ON m.UsuarioID = u.UsuarioID
+                WHERE u.UsuarioID = @UsuarioID";
 
-                try
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    string query = @"SELECT U.Nombre, U.Correo, U.Descripcion, M.Matricula
-                             FROM Maestros M 
-                             JOIN Usuarios U ON (M.UsuarioID = U.UsuarioID) 
-                             WHERE M.MaestroID = @MaestroID";
+                    cmd.Parameters.AddWithValue("@UsuarioID", id);
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MaestroID", maestroIDSeleccionado);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        txtNua.Text = reader["Nua"].ToString();
-                        txtNombre.Text = reader["Nombre"].ToString();
-                        txtCorreo.Text = reader["Correo"].ToString();
-                        txtDescripcion.Text = reader["Descripcion"].ToString();
-                    }
-                    reader.Close();
+                        if (reader.Read())
+                        {
+                            lblNombre.Text = reader["Nombre"].ToString();
+                            lblCorreo.Text = reader["Correo"].ToString();
+                            lblMatricula.Text = reader["Matricula"].ToString();
+                            lblDescripcion.Text = reader["Descripcion"].ToString();
 
-                    tabControl1.SelectedTab = tabPage2;
+                        }
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar alumno: " + ex.Message);
-                }
-                finally
-                {
-                    db.desconectar();
-                }
-            */
-            
+            }
         }
+
 
         private void frmVistaProfesor_Load(object sender, EventArgs e)
         {

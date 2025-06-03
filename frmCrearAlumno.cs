@@ -98,5 +98,23 @@ namespace RedEstudiantilRoque
             Inicio.Show();
             this.Hide();
         }
+
+        private void roundedPanel1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNua.Clear();
+            txtNombre.Clear();
+            txtCorreo.Clear();
+            txtContrasena.Clear();
+            txtDescripcion.Clear();
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

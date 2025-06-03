@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
+using System.IO;
 
 namespace RedEstudiantilRoque
 {
@@ -40,7 +42,7 @@ namespace RedEstudiantilRoque
 
             // General
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BackgroundColor = Color.FromArgb(30, 30, 30);
             dataGridView1.GridColor = Color.LightGray;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AllowUserToAddRows = false;
@@ -169,6 +171,48 @@ namespace RedEstudiantilRoque
             FormAlumno frmAlum = new FormAlumno(nuaAlumno);
             frmAlum.Show();
             this.Hide();
+        }
+
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sfd = new SaveFileDialog()
+            {
+                Filter = "Excel Workbook|*.xlsx",
+                Title = "Guardar horario como Excel"
+            })
+            {
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    using (XLWorkbook workbook = new XLWorkbook())
+                    {
+                        var worksheet = workbook.Worksheets.Add("Horario");
+
+                        // Agregar encabezados
+                        for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                        {
+                            worksheet.Cell(1, i + 1).Value = dataGridView1.Columns[i].HeaderText;
+                            worksheet.Cell(1, i + 1).Style.Font.Bold = true;
+                            worksheet.Cell(1, i + 1).Style.Fill.BackgroundColor = XLColor.LightSkyBlue;
+                        }
+
+                        // Agregar datos
+                        for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                        {
+                            for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                            {
+                                worksheet.Cell(i + 2, j + 1).Value = dataGridView1.Rows[i].Cells[j].Value?.ToString();
+                            }
+                        }
+
+                        // Autoajuste de columnas
+                        worksheet.Columns().AdjustToContents();
+
+                        // Guardar el archivo
+                        workbook.SaveAs(sfd.FileName);
+                        MessageBox.Show("Horario exportado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

@@ -31,6 +31,7 @@ namespace RedEstudiantilRoque
                 return;
             }
             CargarReticulaHorizontal();
+            EstilizarDataGridView(dataGridView2);
         }
 
         private void CargarReticula()
@@ -180,6 +181,56 @@ namespace RedEstudiantilRoque
         {
             FormAlumno frmAlum = new FormAlumno(nuaAlumno);
             frmAlum.Show();
+            this.Hide();
+        }
+
+        private void EstilizarDataGridView(DataGridView dgv)
+        {
+            // Fuente y color general
+            dgv.Font = new Font("Segoe UI", 10);
+            dgv.ForeColor = Color.White;
+            dgv.BackgroundColor = Color.FromArgb(30, 30, 30); // fondo oscuro moderno
+            dgv.GridColor = Color.FromArgb(50, 50, 50);
+
+            // Encabezados
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
+            dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Celdas
+            dgv.DefaultCellStyle.BackColor = Color.FromArgb(40, 40, 40);
+            dgv.DefaultCellStyle.SelectionBackColor = Color.Teal;
+            dgv.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgv.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            // Bordes y estilos
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgv.RowHeadersVisible = false;
+
+            // Alto de las filas
+            dgv.RowTemplate.Height = 30;
+
+            // Scrollbar (opcional, si deseas que combine con el estilo moderno)
+            dgv.ScrollBars = ScrollBars.Both;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // columnas ocupan todo el ancho disponible
+        }
+
+        private void btnAnteriro_Click(object sender, EventArgs e)
+        {
+            FormAlumno frmAlum = new FormAlumno(nuaAlumno);
+            frmAlum.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
             this.Hide();
         }
     }
